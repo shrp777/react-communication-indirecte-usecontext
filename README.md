@@ -2,7 +2,7 @@
 
 - __Objectif__ : éviter le ___"Props Drilling"___ (soit, la communication de messages par l'intermédiaire de composants non concernés).
 
-- __Solution employée__ : Hook useContext [Hook useContext](https://react.dev/reference/react/useContext)
+- __Solution employée__ : [Hook useContext](https://react.dev/reference/react/useContext)
 
 ## Scénario
 
