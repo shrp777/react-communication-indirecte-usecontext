@@ -1,6 +1,8 @@
 # Communication indirecte entre composants par contexte partagé avec useContext dans une application React
 
-- __Objectif__ : éviter le ___"Props Drilling"___ (soit, la communication de messages par l'intermédiaire de composants non concernés).
+- __Objectif__ : éviter le ___"[Props Drilling](https://react.dev/learn/passing-data-deeply-with-context)"___ (soit, la communication de messages par l'intermédiaire de composants non concernés).
+
+![Props Drilling](./readme-assets/passing_data_prop_drilling.webp)
 
 - __Solution employée__ : [Hook useContext](https://react.dev/reference/react/useContext)
 
