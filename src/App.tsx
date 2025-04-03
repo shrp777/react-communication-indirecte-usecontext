@@ -10,9 +10,7 @@ function App() {
 
   return (
     <>
-      <MessagesContext.Provider
-        value={{ messages: messages, setMessages: setMessages }}
-      >
+      <MessagesContext.Provider value={{ messages, setMessages }}>
         <Homer />
         <Bart />
       </MessagesContext.Provider>
