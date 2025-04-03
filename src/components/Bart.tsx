@@ -1,12 +1,17 @@
 import "./css/Bart.css";
 import bartImg from "../assets/Bart.png";
 import { Message } from "../types/Message";
+import { useContext } from "react";
+import MessagesContext, {
+  MessagesContextType
+} from "../contexts/MessagesContext";
 
-export type BartParams = {
-  callFatherFunction: (message: Message) => void;
-};
+export default function Bart() {
+  const context = useContext<MessagesContextType>(MessagesContext);
 
-export default function Bart({ callFatherFunction }: BartParams) {
+  const messages = context.messages;
+  const setMessages = context.setMessages!;
+
   //retourne une phrase au hasard
   function getRandomBartQuote(): string {
     const bartSimpsonQuotes: string[] = [
@@ -24,9 +29,12 @@ export default function Bart({ callFatherFunction }: BartParams) {
 
   //fonction appelée lorsque le bouton est cliqué
   function saySomething(): void {
-    callFatherFunction({ content: getRandomBartQuote(), date: new Date() });
-    //appelle la fonction passée en paramètre par le composant parent
-    //et transmet un message
+    const message: Message = {
+      content: getRandomBartQuote(),
+      date: new Date()
+    };
+
+    setMessages([...messages, message]);
   }
 
   return (
