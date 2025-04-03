@@ -27,8 +27,8 @@ export default function Homer() {
         <ul>
           {messages.map((message) => (
             <li>
-              Bart a dit : "{message.content}" <br /> (
-              {formatToFrenchDate(message.date)})
+              Bart a dit : <span className="message">"{message.content}"</span>{" "}
+              <br /> ({formatToFrenchDate(message.date)})
             </li>
           ))}
         </ul>
