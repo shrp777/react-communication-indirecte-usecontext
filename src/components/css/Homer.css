@@ -1,0 +1,24 @@
+.Homer {
+    border-radius: 0.3em;
+    background-color: lightpink;
+    padding: 3em;
+    margin: 3em;
+
+    display: flex;
+
+
+
+    ul {
+        width: 12em;
+        padding: 0;
+
+        li:nth-child(even) {
+            background-color: lightcoral;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 2em;
+    }
+}
