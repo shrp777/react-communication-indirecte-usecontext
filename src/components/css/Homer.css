@@ -6,14 +6,18 @@
 
     display: flex;
 
-
-
     ul {
+
+        list-style: none;
         width: 12em;
         padding: 0;
 
         li:nth-child(even) {
             background-color: lightcoral;
+        }
+
+        li {
+            padding: 0.3em;
         }
     }
 
